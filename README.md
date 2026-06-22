@@ -56,6 +56,11 @@ Outputs:
 
 ## Reuse in Another Instance
 
+See **[`docs/using-in-an-instance.md`](docs/using-in-an-instance.md)** for the full
+guide: the framework-vs-instance model, creating an instance, customizing the
+instance-owned files (portfolio, knowledge modules, resolver rules, policy), and
+keeping the instance in sync with this pack.
+
 ```bash
 # create a new feature workspace from starter
 ./scripts/bootstrap_project.sh /path/to/new-feature
