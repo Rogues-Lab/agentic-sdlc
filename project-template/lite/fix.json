@@ -1,0 +1,13 @@
+{
+  "issue_id": "ISSUE-1001",
+  "change_id": "FIX-1001",
+  "summary": "Token-refresh jitter and lock patch",
+  "repos_touched": ["film-fun/community"],
+  "tickets": ["TKT-ops-1001"],
+  "tests_added_or_updated": ["TEST-token-refresh-contention"],
+  "checks_required": ["CHECK-auth-regression", "CHECK-latency-baseline"],
+  "rollback_plan": "Disable new token-refresh path and revert lock logic",
+  "spec_delta_required": true,
+  "spec_delta_path": "project-template/artifacts/spec.json",
+  "status": "implemented"
+}

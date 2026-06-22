@@ -1,0 +1,26 @@
+{
+  "request_id": "REQCTX-001",
+  "selected_lane": "full",
+  "lane_reasons": [
+    "complexity_score>=7",
+    "risk_score>=7",
+    "multi_repo_or_bundle with high complexity/risk",
+    "requires_migration=true"
+  ],
+  "ops_impact": true,
+  "required_artifacts": [
+    "investigation.json",
+    "fix.json",
+    "verification-results.json",
+    "spec.json",
+    "test-plan.json",
+    "tickets.json"
+  ],
+  "policy": {
+    "spec_update_required_if": [
+      "behavioral contract changed",
+      "nfr/performance/security requirements changed",
+      "user-visible behavior changed"
+    ]
+  }
+}

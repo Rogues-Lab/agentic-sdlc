@@ -1,0 +1,125 @@
+{
+  "module_library": [
+    {
+      "id": "shared-standards",
+      "path": "project-template/knowledge/shared/engineering-standards.md",
+      "tags": ["standards", "engineering"]
+    },
+    {
+      "id": "openclaw-architecture",
+      "path": "project-template/knowledge/openclaw/architecture.md",
+      "tags": ["architecture", "openclaw"]
+    },
+    {
+      "id": "clawsweeper-standards",
+      "path": "project-template/knowledge/openclaw/clawsweeper-standards.md",
+      "tags": ["repo-standards", "openclaw"]
+    },
+    {
+      "id": "film-fun-architecture",
+      "path": "project-template/knowledge/film-fun/architecture.md",
+      "tags": ["architecture", "film-fun"]
+    },
+    {
+      "id": "film-fun-deploy",
+      "path": "project-template/knowledge/film-fun/deployment-guidelines.md",
+      "tags": ["deployment", "release", "film-fun"]
+    },
+    {
+      "id": "community-contracts",
+      "path": "project-template/knowledge/film-fun/community-contracts.md",
+      "tags": ["contracts", "auth", "film-fun"]
+    }
+  ],
+  "resolver_rules": [
+    {
+      "id": "base-shared",
+      "priority": 100,
+      "match": {"always": true},
+      "module_ids": ["shared-standards"],
+      "decision_overrides": {
+        "quality_gates": {
+          "required_check_types": ["unit", "integration"],
+          "blocked_on_review_severity": ["high", "critical"],
+          "blocked_on_qa_severity": ["high", "critical"]
+        }
+      }
+    },
+    {
+      "id": "openclaw-major-project",
+      "priority": 200,
+      "match": {
+        "major_project_ids": ["openclaw-platform"]
+      },
+      "module_ids": ["openclaw-architecture"],
+      "decision_overrides": {
+        "architecture": {
+          "strategy": "modular-agent-runtime",
+          "constraints": ["backward-compatible agent contracts"]
+        }
+      }
+    },
+    {
+      "id": "clawsweeper-repo",
+      "priority": 300,
+      "match": {
+        "repos": ["openclaw/clawsweeper"]
+      },
+      "module_ids": ["clawsweeper-standards"]
+    },
+    {
+      "id": "film-fun-major-project",
+      "priority": 200,
+      "match": {
+        "major_project_ids": ["film-fun-ecosystem"]
+      },
+      "module_ids": ["film-fun-architecture", "film-fun-deploy"],
+      "decision_overrides": {
+        "architecture": {
+          "strategy": "multi-repo media platform",
+          "constraints": ["shared contracts and phased rollout"]
+        }
+      }
+    },
+    {
+      "id": "film-fun-community-repo",
+      "priority": 300,
+      "match": {
+        "repos": ["film-fun/community"]
+      },
+      "module_ids": ["community-contracts"]
+    },
+    {
+      "id": "prod-deployment-hardening",
+      "priority": 500,
+      "match": {
+        "deployment_targets": ["community-web-prod", "splice-api-prod", "splice-worker-prod"]
+      },
+      "decision_overrides": {
+        "release": {
+          "requires_canary": true,
+          "requires_rollback_plan": true
+        }
+      }
+    },
+    {
+      "id": "hotfix-policy",
+      "priority": 600,
+      "match": {
+        "tags": ["hotfix"]
+      },
+      "decision_overrides": {
+        "release": {
+          "expedite": true,
+          "post_release_review_required": true
+        },
+        "priority": {
+          "weights": {
+            "time_criticality": 2.0
+          },
+          "blocked_penalty": 400
+        }
+      }
+    }
+  ]
+}

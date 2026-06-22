@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Change Bundles",
+  "type": "object",
+  "required": ["change_bundles"],
+  "properties": {
+    "change_bundles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "workstreams"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^CHG-[0-9]{3}$"},
+          "title": {"type": "string"},
+          "major_project_id": {"type": "string"},
+          "workstreams": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["repo"],
+              "properties": {
+                "repo": {"type": "string"},
+                "linked_backlog_ids": {"type": "array", "items": {"type": "string"}},
+                "deployments_impacted": {"type": "array", "items": {"type": "string"}},
+                "release_order": {"type": "integer"}
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

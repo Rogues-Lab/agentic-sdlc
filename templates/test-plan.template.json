@@ -1,0 +1,16 @@
+{
+  "tests": [
+    {
+      "id": "TEST-001",
+      "ac_ids": ["AC-001"],
+      "type": "unit",
+      "command": "echo UNIT_OK"
+    },
+    {
+      "id": "TEST-002",
+      "ac_ids": ["AC-002"],
+      "type": "integration",
+      "command": "echo INTEGRATION_OK"
+    }
+  ]
+}

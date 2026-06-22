@@ -1,0 +1,40 @@
+{
+  "id": "BLG-001",
+  "title": "Example backlog item",
+  "description": "User-visible outcome",
+  "source": {
+    "system": "github-project",
+    "scope": "acme/api-service",
+    "external_id": "123"
+  },
+  "status": "todo",
+  "type": "feature",
+  "owner": "cto",
+  "labels": [
+    "api",
+    "priority"
+  ],
+  "risk_level": "medium",
+  "effort_points": 5,
+  "priority_inputs": {
+    "business_value": 8,
+    "time_criticality": 6,
+    "risk_reduction_or_opportunity": 7,
+    "job_size": 5
+  },
+  "dependencies": [],
+  "linked_spec_id": "SPEC-example-feature",
+  "linked_ticket_ids": [
+    "TKT-001"
+  ],
+  "created_at": "2026-05-15T00:00:00Z",
+  "updated_at": "2026-05-15T00:00:00Z",
+  "major_project_id": "openclaw-platform",
+  "repo": "openclaw/clawsweeper",
+  "change_bundle_ids": [
+    "CHG-001"
+  ],
+  "deployments_impacted": [
+    "community-web-prod"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "request_id": "REQCTX-001",
+  "summary": "Example change request",
+  "complexity_score": 7,
+  "risk_score": 6,
+  "new_product_or_major_domain": false,
+  "operations_impact": true,
+  "requires_migration": false,
+  "multi_repo_or_bundle": true,
+  "preferred_implementation_agent": "auto",
+  "allowed_implementation_agents": ["codex", "claude"],
+  "implementation_mode": "run",
+  "fallback_implementation_agent": "codex",
+  "execution_channel": "acp_subscription",
+  "hook_profile": "default-coding-lifecycle",
+  "direct_model_execution": false
+}

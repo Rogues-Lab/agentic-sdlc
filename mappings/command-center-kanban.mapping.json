@@ -1,0 +1,12 @@
+{
+  "system": "=command-center-kanban",
+  "scope": "board.id",
+  "id": "card.id",
+  "title": "card.title",
+  "description": "card.description",
+  "status": "column.name",
+  "labels": "card.labels[].name",
+  "owner": "card.assignee.handle",
+  "updated_at": "card.updated_at",
+  "created_at": "card.created_at"
+}

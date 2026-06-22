@@ -1,0 +1,46 @@
+taskflow_id: feature-delivery-v2
+steps:
+  - id: spec_check
+    action: validate_spec
+    inputs: [spec_file]
+  - id: ticket_gen
+    action: validate_tickets
+    inputs: [ticket_files]
+  - id: hook_request
+    action: emit_hook
+    params:
+      event: delegation.requested
+  - id: delegate_build
+    action: spawn_acp_worker
+    params:
+      runtime: acp
+      preferredAgent: auto
+      allowedAgents: [codex, claude]
+      fallbackAgent: codex
+      executionChannel: acp_subscription
+  - id: hook_start
+    action: emit_hook
+    params:
+      event: delegation.started
+  - id: hook_progress
+    action: emit_hook
+    params:
+      event: delegation.progress
+  - id: run_tests
+    action: run_verification_manifest
+    inputs: [verification_manifest]
+  - id: hook_complete
+    action: emit_hook
+    params:
+      event: delegation.completed
+  - id: cto_review
+    action: produce_review_report
+  - id: qa_run
+    action: produce_qa_report
+  - id: review_hook
+    action: emit_hook
+    params:
+      event: review.completed
+  - id: ship_gate
+    action: evaluate_gate_policy
+    inputs: [gate_policy, review_report, qa_report, verification_results]

@@ -1,0 +1,22 @@
+[
+  {
+    "number": 101,
+    "title": "Add deterministic error payload",
+    "body": "Errors should return code+message+trace_id",
+    "state": "open",
+    "labels": [{"name": "api"}, {"name": "p1"}],
+    "assignee": {"login": "cto"},
+    "updated_at": "2026-05-15T00:00:00Z",
+    "created_at": "2026-05-14T00:00:00Z"
+  },
+  {
+    "number": 102,
+    "title": "Add auth integration tests",
+    "body": "Cover token expiry and role denial",
+    "state": "open",
+    "labels": [{"name": "test"}],
+    "assignee": {"login": "qa"},
+    "updated_at": "2026-05-15T00:00:00Z",
+    "created_at": "2026-05-14T00:00:00Z"
+  }
+]

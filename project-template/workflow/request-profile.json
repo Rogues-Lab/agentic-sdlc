@@ -1,0 +1,10 @@
+{
+  "request_id": "REQCTX-001",
+  "summary": "Cross-repo auth contract rollout with production impact",
+  "complexity_score": 8,
+  "risk_score": 7,
+  "new_product_or_major_domain": false,
+  "operations_impact": true,
+  "requires_migration": true,
+  "multi_repo_or_bundle": true
+}

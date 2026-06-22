@@ -1,0 +1,23 @@
+{
+  "issue_id": "ISSUE-001",
+  "title": "Intermittent auth timeout",
+  "category": "operations-support",
+  "symptoms": [
+    "Spike in 401 responses for valid sessions",
+    "Retry succeeds within 1-2 attempts"
+  ],
+  "suspected_scope": {
+    "repos": ["example/api"],
+    "deployments": ["api-prod"]
+  },
+  "root_cause": "Token cache eviction race in auth middleware",
+  "fix_strategy": "Patch middleware cache locking and add regression test",
+  "risk_level": "medium",
+  "verification_checks": [
+    "CHECK-auth-regression",
+    "CHECK-latency-baseline"
+  ],
+  "requires_spec_delta": true,
+  "spec_delta_notes": "Update auth retry behavior in non-functional requirements",
+  "status": "ready-for-fix"
+}

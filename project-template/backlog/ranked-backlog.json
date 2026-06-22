@@ -1,0 +1,134 @@
+{
+  "method": "wsjf",
+  "resolved_priority_policy": {
+    "weights": {
+      "business_value": 1.0,
+      "time_criticality": 2.0,
+      "risk_reduction_or_opportunity": 1.0
+    },
+    "default_job_size": 5,
+    "blocked_penalty": 400
+  },
+  "ranked_items": [
+    {
+      "id": "BLG-001",
+      "title": "Add deterministic error payload",
+      "status": "todo",
+      "score": 4.0,
+      "source": {
+        "system": "github",
+        "scope": null,
+        "external_id": "101"
+      },
+      "major_project_id": "unassigned",
+      "repo": null,
+      "linked_spec_id": null
+    },
+    {
+      "id": "BLG-002",
+      "title": "Add auth integration tests",
+      "status": "todo",
+      "score": 4.0,
+      "source": {
+        "system": "github",
+        "scope": null,
+        "external_id": "102"
+      },
+      "major_project_id": "unassigned",
+      "repo": null,
+      "linked_spec_id": null
+    },
+    {
+      "id": "BLG-003",
+      "title": "Clawsweeper deterministic run reports",
+      "status": "todo",
+      "score": 4.0,
+      "source": {
+        "system": "github-project",
+        "scope": "openclaw/clawsweeper",
+        "external_id": "201"
+      },
+      "major_project_id": "openclaw-platform",
+      "repo": "openclaw/clawsweeper",
+      "linked_spec_id": null
+    },
+    {
+      "id": "BLG-004",
+      "title": "Community auth contract alignment",
+      "status": "todo",
+      "score": 4.0,
+      "source": {
+        "system": "github-project",
+        "scope": "film-fun/community",
+        "external_id": "301"
+      },
+      "major_project_id": "film-fun-ecosystem",
+      "repo": "film-fun/community",
+      "linked_spec_id": null
+    },
+    {
+      "id": "BLG-005",
+      "title": "Splice render queue retry policy",
+      "status": "todo",
+      "score": 4.0,
+      "source": {
+        "system": "github-project",
+        "scope": "film-fun/splice",
+        "external_id": "301"
+      },
+      "major_project_id": "film-fun-ecosystem",
+      "repo": "film-fun/splice",
+      "linked_spec_id": null
+    },
+    {
+      "id": "BLG-006",
+      "title": "Reelkit event schema normalization",
+      "status": "todo",
+      "score": 4.0,
+      "source": {
+        "system": "github-project",
+        "scope": "film-fun/reelkit",
+        "external_id": "301"
+      },
+      "major_project_id": "film-fun-ecosystem",
+      "repo": "film-fun/reelkit",
+      "linked_spec_id": null
+    }
+  ],
+  "ranked_major_projects": [
+    {
+      "major_project_id": "film-fun-ecosystem",
+      "aggregate_score": 12.0
+    },
+    {
+      "major_project_id": "unassigned",
+      "aggregate_score": 8.0
+    },
+    {
+      "major_project_id": "openclaw-platform",
+      "aggregate_score": 4.0
+    }
+  ],
+  "ranked_repos": [
+    {
+      "repo": "unscoped",
+      "aggregate_score": 8.0
+    },
+    {
+      "repo": "openclaw/clawsweeper",
+      "aggregate_score": 4.0
+    },
+    {
+      "repo": "film-fun/community",
+      "aggregate_score": 4.0
+    },
+    {
+      "repo": "film-fun/splice",
+      "aggregate_score": 4.0
+    },
+    {
+      "repo": "film-fun/reelkit",
+      "aggregate_score": 4.0
+    }
+  ]
+}

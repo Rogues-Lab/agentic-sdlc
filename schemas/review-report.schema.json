@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Review Report",
+  "type": "object",
+  "required": ["decision", "findings", "gates"],
+  "properties": {
+    "decision": {"type": "string", "enum": ["APPROVE", "CHANGES_REQUESTED", "BLOCKED"]},
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["severity", "summary", "status"],
+        "properties": {
+          "severity": {"type": "string", "enum": ["critical", "high", "medium", "low"]},
+          "summary": {"type": "string"},
+          "status": {"type": "string", "enum": ["open", "resolved", "waived"]}
+        }
+      }
+    },
+    "gates": {
+      "type": "object",
+      "properties": {
+        "review_ready": {"type": "string"},
+        "qa_ready_recommendation": {"type": "string"}
+      }
+    }
+  }
+}

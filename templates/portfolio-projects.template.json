@@ -1,0 +1,22 @@
+{
+  "major_projects": [
+    {
+      "id": "openclaw-platform",
+      "name": "OpenClaw Platform",
+      "description": "Core OpenClaw ecosystem delivery",
+      "repos": [
+        "openclaw/clawsweeper"
+      ]
+    },
+    {
+      "id": "film-fun-ecosystem",
+      "name": "film.fun Ecosystem",
+      "description": "Multi-repo film.fun product ecosystem",
+      "repos": [
+        "film-fun/community",
+        "film-fun/splice",
+        "film-fun/reelkit"
+      ]
+    }
+  ]
+}

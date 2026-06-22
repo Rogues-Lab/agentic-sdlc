@@ -1,0 +1,37 @@
+{
+  "change_bundles": [
+    {
+      "id": "CHG-001",
+      "title": "Example cross-repo change",
+      "major_project_id": "film-fun-ecosystem",
+      "objective": "Implement shared contract update across repos",
+      "status": "todo",
+      "priority_inputs": {
+        "business_value": 8,
+        "time_criticality": 7,
+        "risk_reduction_or_opportunity": 6,
+        "job_size": 8
+      },
+      "workstreams": [
+        {
+          "repo": "film-fun/community",
+          "linked_backlog_ids": ["BLG-004"],
+          "linked_ticket_ids": ["TKT-010"],
+          "deployments_impacted": ["community-web-prod"],
+          "release_order": 1
+        },
+        {
+          "repo": "film-fun/splice",
+          "linked_backlog_ids": ["BLG-005"],
+          "linked_ticket_ids": ["TKT-011"],
+          "deployments_impacted": ["splice-api-prod", "splice-worker-prod"],
+          "release_order": 2
+        }
+      ],
+      "cross_repo_constraints": [
+        "Shared auth contract must stay backward compatible during phased rollout"
+      ],
+      "rollback_strategy": "Revert feature flags in reverse release order"
+    }
+  ]
+}

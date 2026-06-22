@@ -1,0 +1,26 @@
+{
+  "feature_id": "SPEC-example-feature",
+  "results": [
+    {"id": "CHECK-001", "test_id": "TEST-001", "type": "unit", "status": "PASS", "exit_code": 0}
+  ],
+  "summary": {"total": 1, "passed": 0, "failed": 1},
+  "gates": {
+    "design_ready": "PASS",
+    "build_ready": "PASS",
+    "test_ready": "FAIL",
+    "review_ready": "PASS",
+    "qa_ready": "PASS"
+  },
+  "waivers": [
+    {
+      "id": "WV-2",
+      "gate": "test_ready",
+      "rationale": "stale waiver",
+      "approver": "cto",
+      "expires_at": "2000-01-01T00:00:00Z"
+    }
+  ],
+  "ship_policy": {
+    "block_on_failed_types": ["security", "contract", "integration"]
+  }
+}

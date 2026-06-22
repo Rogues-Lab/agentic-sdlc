@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Spec",
+  "type": "object",
+  "required": ["spec_id", "requirements", "acceptance_criteria"],
+  "properties": {
+    "spec_id": {"type": "string", "pattern": "^SPEC-[a-z0-9-]+$"},
+    "title": {"type": "string"},
+    "requirements": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "text"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^REQ-[0-9]{3}$"},
+          "text": {"type": "string"}
+        }
+      }
+    },
+    "acceptance_criteria": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "requirement_id", "given", "when", "then"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^AC-[0-9]{3}$"},
+          "requirement_id": {"type": "string", "pattern": "^REQ-[0-9]{3}$"},
+          "given": {"type": "string"},
+          "when": {"type": "string"},
+          "then": {"type": "string"}
+        }
+      }
+    }
+  }
+}

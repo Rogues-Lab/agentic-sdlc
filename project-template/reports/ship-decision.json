@@ -1,0 +1,30 @@
+{
+  "decision": "APPROVE",
+  "status": "PASS",
+  "resolved_policy": {
+    "required_gates": [
+      "design_ready",
+      "build_ready",
+      "test_ready",
+      "review_ready",
+      "qa_ready"
+    ],
+    "blocked_review_severities": [
+      "critical",
+      "high"
+    ],
+    "blocked_qa_severities": [
+      "critical",
+      "high"
+    ],
+    "blocked_check_types": [
+      "contract",
+      "integration",
+      "security"
+    ],
+    "waivers_enabled": true
+  },
+  "reasons": [],
+  "waived": [],
+  "invalid_waivers": []
+}

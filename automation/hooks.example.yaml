@@ -1,0 +1,22 @@
+hooks:
+  - event: delegation.requested
+    action: validate_delegation_payload
+    params:
+      execution_channel: acp_subscription
+      allowed_agents: [codex, claude]
+  - event: delegation.started
+    action: board_set_status
+    params:
+      status: in-progress
+  - event: delegation.progress
+    action: append_implementation_update
+  - event: delegation.blocked
+    action: board_set_status
+    params:
+      status: blocked
+  - event: delegation.completed
+    action: collect_worker_evidence
+  - event: review.completed
+    action: board_set_status
+    params:
+      status: done

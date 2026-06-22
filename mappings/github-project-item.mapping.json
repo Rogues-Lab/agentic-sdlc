@@ -1,0 +1,12 @@
+{
+  "system": "=github-project",
+  "scope": "repository.full_name",
+  "id": "content.number",
+  "title": "content.title",
+  "description": "content.body",
+  "status": "content.state",
+  "labels": "content.labels[].name",
+  "owner": "content.assignee.login",
+  "updated_at": "content.updated_at",
+  "created_at": "content.created_at"
+}

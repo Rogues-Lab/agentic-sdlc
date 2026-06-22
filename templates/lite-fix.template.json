@@ -1,0 +1,13 @@
+{
+  "issue_id": "ISSUE-001",
+  "change_id": "FIX-001",
+  "summary": "Stabilize token cache access",
+  "repos_touched": ["example/api"],
+  "tickets": ["TKT-ops-001"],
+  "tests_added_or_updated": ["TEST-auth-cache-race"],
+  "checks_required": ["CHECK-auth-regression", "CHECK-latency-baseline"],
+  "rollback_plan": "Revert middleware patch and re-enable prior cache strategy",
+  "spec_delta_required": true,
+  "spec_delta_path": "project-template/artifacts/spec.json",
+  "status": "implemented"
+}

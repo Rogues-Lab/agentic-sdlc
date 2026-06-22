@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "feature_id": "SPEC-example-feature",
+  "gates": {
+    "design_ready": "PASS",
+    "build_ready": "PASS",
+    "test_ready": "PASS",
+    "review_ready": "PASS",
+    "qa_ready": "PASS",
+    "ship_ready": "BLOCKED"
+  },
+  "checks": [
+    {
+      "id": "CHECK-001",
+      "test_id": "TEST-001",
+      "ac_ids": ["AC-001"],
+      "type": "unit",
+      "command": "echo UNIT_OK",
+      "expected_exit_code": 0,
+      "must_contain": ["UNIT_OK"],
+      "must_not_contain": ["ERROR", "EXCEPTION"],
+      "artifacts": []
+    },
+    {
+      "id": "CHECK-002",
+      "test_id": "TEST-002",
+      "ac_ids": ["AC-002"],
+      "type": "integration",
+      "command": "echo INTEGRATION_OK",
+      "expected_exit_code": 0,
+      "must_contain": ["INTEGRATION_OK"],
+      "must_not_contain": ["ERROR", "EXCEPTION"],
+      "artifacts": []
+    }
+  ],
+  "waivers": [],
+  "ship_policy": {
+    "block_on_failed_types": ["security", "contract", "integration"],
+    "allow_waiver": true,
+    "waiver_requires": ["rationale", "approver", "expires_at"]
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "enabled_extensions": [
+    {
+      "id": "security-baseline",
+      "title": "Security Baseline",
+      "blocking": true,
+      "rules": [
+        {
+          "id": "SEC-01",
+          "description": "All external inputs must be validated and sanitized"
+        },
+        {
+          "id": "SEC-02",
+          "description": "Authn/Authz requirements must be explicitly tested"
+        }
+      ]
+    },
+    {
+      "id": "property-based-testing",
+      "title": "Property-Based Testing",
+      "blocking": true,
+      "rules": [
+        {
+          "id": "PBT-01",
+          "description": "Define property invariants for critical domain logic"
+        }
+      ]
+    }
+  ],
+  "disabled_extensions": [],
+  "blocking_rules": [
+    {
+      "extension_id": "security-baseline",
+      "rule_id": "SEC-01",
+      "description": "All external inputs must be validated and sanitized"
+    },
+    {
+      "extension_id": "security-baseline",
+      "rule_id": "SEC-02",
+      "description": "Authn/Authz requirements must be explicitly tested"
+    },
+    {
+      "extension_id": "property-based-testing",
+      "rule_id": "PBT-01",
+      "description": "Define property invariants for critical domain logic"
+    }
+  ]
+}

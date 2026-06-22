@@ -1,0 +1,24 @@
+{
+  "spec_id": "SPEC-example-feature",
+  "title": "Example Feature",
+  "requirements": [
+    {"id": "REQ-001", "text": "System shall do X"},
+    {"id": "REQ-002", "text": "System shall do Y"}
+  ],
+  "acceptance_criteria": [
+    {
+      "id": "AC-001",
+      "requirement_id": "REQ-001",
+      "given": "a valid input",
+      "when": "operation executes",
+      "then": "expected output is returned"
+    },
+    {
+      "id": "AC-002",
+      "requirement_id": "REQ-002",
+      "given": "an invalid input",
+      "when": "operation executes",
+      "then": "error is handled deterministically"
+    }
+  ]
+}

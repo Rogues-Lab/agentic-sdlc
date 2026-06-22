@@ -1,0 +1,8 @@
+cron_jobs:
+  - id: nightly-regression
+    schedule: "0 2 * * *"
+    task: run_verification_manifest
+    inputs:
+      manifest: automation/verification-manifest.template.yaml
+    on_failure:
+      notify: [engineering, alerts]

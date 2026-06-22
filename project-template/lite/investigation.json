@@ -1,0 +1,23 @@
+{
+  "issue_id": "ISSUE-1001",
+  "title": "Prod API auth retries causing latency spikes",
+  "category": "operations-support",
+  "symptoms": [
+    "p95 latency increased by 40%",
+    "401 spikes around token-refresh windows"
+  ],
+  "suspected_scope": {
+    "repos": ["film-fun/community"],
+    "deployments": ["community-web-prod"]
+  },
+  "root_cause": "Retry storm from optimistic token refresh under contention",
+  "fix_strategy": "Add jitter and lock-token refresh section",
+  "risk_level": "medium",
+  "verification_checks": [
+    "CHECK-auth-regression",
+    "CHECK-latency-baseline"
+  ],
+  "requires_spec_delta": true,
+  "spec_delta_notes": "Clarify token-refresh retry policy and contention handling",
+  "status": "ready-for-fix"
+}

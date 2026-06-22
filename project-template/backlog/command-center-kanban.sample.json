@@ -1,0 +1,28 @@
+[
+  {
+    "board": {"id": "cc-product-delivery"},
+    "column": {"name": "In Progress"},
+    "card": {
+      "id": "CC-101",
+      "title": "Investigate intermittent auth retry spike",
+      "description": "Ops issue impacting community-web-prod latency.",
+      "labels": [{"name": "ops"}, {"name": "auth"}],
+      "assignee": {"handle": "cto"},
+      "created_at": "2026-05-16T00:00:00Z",
+      "updated_at": "2026-05-16T00:15:00Z"
+    }
+  },
+  {
+    "board": {"id": "cc-product-delivery"},
+    "column": {"name": "Backlog"},
+    "card": {
+      "id": "CC-102",
+      "title": "Draft spec delta for token refresh behavior",
+      "description": "Potential contract update after ops investigation.",
+      "labels": [{"name": "spec-delta"}],
+      "assignee": {"handle": "cto"},
+      "created_at": "2026-05-16T00:05:00Z",
+      "updated_at": "2026-05-16T00:20:00Z"
+    }
+  }
+]

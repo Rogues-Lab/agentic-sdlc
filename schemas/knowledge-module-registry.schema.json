@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Knowledge Module Registry",
+  "type": "object",
+  "properties": {
+    "module_library": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/module"}
+    },
+    "resolver_rules": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/rule"}
+    },
+    "default_modules": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/module"}
+    },
+    "major_project_modules": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "items": {"$ref": "#/$defs/module"}
+      }
+    },
+    "repo_modules": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "items": {"$ref": "#/$defs/module"}
+      }
+    }
+  },
+  "$defs": {
+    "module": {
+      "type": "object",
+      "required": ["id", "path"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "path": {"type": "string", "minLength": 1},
+        "tags": {
+          "type": "array",
+          "items": {"type": "string"}
+        }
+      },
+      "additionalProperties": true
+    },
+    "rule": {
+      "type": "object",
+      "required": ["id", "match"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "priority": {"type": "integer"},
+        "match": {
+          "type": "object",
+          "properties": {
+            "always": {"type": "boolean"},
+            "major_project_ids": {
+              "type": "array",
+              "items": {"type": "string"}
+            },
+            "product_ids": {
+              "type": "array",
+              "items": {"type": "string"}
+            },
+            "repos": {
+              "type": "array",
+              "items": {"type": "string"}
+            },
+            "repo_prefixes": {
+              "type": "array",
+              "items": {"type": "string"}
+            },
+            "repo_patterns": {
+              "type": "array",
+              "items": {"type": "string"}
+            },
+            "deployment_targets": {
+              "type": "array",
+              "items": {"type": "string"}
+            },
+            "change_bundle_ids": {
+              "type": "array",
+              "items": {"type": "string"}
+            },
+            "tags": {
+              "type": "array",
+              "items": {"type": "string"}
+            }
+          },
+          "additionalProperties": false
+        },
+        "module_ids": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "modules": {
+          "type": "array",
+          "items": {"$ref": "#/$defs/module"}
+        },
+        "decision_overrides": {
+          "type": "object",
+          "additionalProperties": true
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

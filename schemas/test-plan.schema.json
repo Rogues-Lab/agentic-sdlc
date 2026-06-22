@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Test Plan",
+  "type": "object",
+  "required": ["tests"],
+  "properties": {
+    "tests": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "ac_ids", "type", "command"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^TEST-[0-9]{3}$"},
+          "ac_ids": {"type": "array", "items": {"type": "string", "pattern": "^AC-[0-9]{3}$"}},
+          "type": {"type": "string", "enum": ["unit", "integration", "e2e", "security", "performance", "manual"]},
+          "command": {"type": "string"}
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "system": "=jira",
+  "scope": "fields.project.key",
+  "id": "key",
+  "title": "fields.summary",
+  "description": "fields.description",
+  "status": "fields.status.name",
+  "labels": "fields.labels",
+  "owner": "fields.assignee.displayName",
+  "updated_at": "fields.updated",
+  "created_at": "fields.created"
+}

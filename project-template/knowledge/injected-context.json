@@ -1,0 +1,118 @@
+{
+  "selector_context": {
+    "major_project_id": "openclaw-platform",
+    "product_id": "clawsweeper",
+    "repos": [
+      "film-fun/community",
+      "film-fun/splice",
+      "openclaw/clawsweeper"
+    ],
+    "deployments": [
+      "community-web-prod",
+      "splice-api-prod",
+      "splice-worker-prod"
+    ],
+    "change_bundle_ids": [
+      "CHG-001"
+    ],
+    "tags": [
+      "hotfix"
+    ]
+  },
+  "applied_rules": [
+    {
+      "id": "base-shared",
+      "priority": 100
+    },
+    {
+      "id": "openclaw-major-project",
+      "priority": 200
+    },
+    {
+      "id": "clawsweeper-repo",
+      "priority": 300
+    },
+    {
+      "id": "film-fun-community-repo",
+      "priority": 300
+    },
+    {
+      "id": "prod-deployment-hardening",
+      "priority": 500
+    },
+    {
+      "id": "hotfix-policy",
+      "priority": 600
+    }
+  ],
+  "decision_context": {
+    "quality_gates": {
+      "required_check_types": [
+        "unit",
+        "integration"
+      ],
+      "blocked_on_review_severity": [
+        "high",
+        "critical"
+      ],
+      "blocked_on_qa_severity": [
+        "high",
+        "critical"
+      ]
+    },
+    "architecture": {
+      "strategy": "modular-agent-runtime",
+      "constraints": [
+        "backward-compatible agent contracts"
+      ]
+    },
+    "release": {
+      "requires_canary": true,
+      "requires_rollback_plan": true,
+      "expedite": true,
+      "post_release_review_required": true
+    },
+    "priority": {
+      "weights": {
+        "time_criticality": 2.0
+      },
+      "blocked_penalty": 400
+    }
+  },
+  "loaded_modules": [
+    {
+      "id": "shared-standards",
+      "tags": [
+        "standards",
+        "engineering"
+      ],
+      "path": "project-template/knowledge/shared/engineering-standards.md"
+    },
+    {
+      "id": "openclaw-architecture",
+      "tags": [
+        "architecture",
+        "openclaw"
+      ],
+      "path": "project-template/knowledge/openclaw/architecture.md"
+    },
+    {
+      "id": "clawsweeper-standards",
+      "tags": [
+        "repo-standards",
+        "openclaw"
+      ],
+      "path": "project-template/knowledge/openclaw/clawsweeper-standards.md"
+    },
+    {
+      "id": "community-contracts",
+      "tags": [
+        "contracts",
+        "auth",
+        "film-fun"
+      ],
+      "path": "project-template/knowledge/film-fun/community-contracts.md"
+    }
+  ],
+  "missing_modules": []
+}

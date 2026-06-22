@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Verification Manifest",
+  "type": "object",
+  "required": ["version", "feature_id", "gates", "checks", "ship_policy"],
+  "properties": {
+    "version": {"type": "integer", "minimum": 1},
+    "feature_id": {"type": "string", "pattern": "^SPEC-[a-z0-9-]+$"},
+    "gates": {
+      "type": "object",
+      "required": ["design_ready", "build_ready", "test_ready", "review_ready", "qa_ready", "ship_ready"],
+      "properties": {
+        "design_ready": {"type": "string"},
+        "build_ready": {"type": "string"},
+        "test_ready": {"type": "string"},
+        "review_ready": {"type": "string"},
+        "qa_ready": {"type": "string"},
+        "ship_ready": {"type": "string"}
+      }
+    },
+    "checks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "test_id", "ac_ids", "type", "command", "expected_exit_code"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^CHECK-[0-9]{3}$"},
+          "test_id": {"type": "string", "pattern": "^TEST-[0-9]{3}$"},
+          "ac_ids": {"type": "array", "items": {"type": "string", "pattern": "^AC-[0-9]{3}$"}},
+          "type": {"type": "string"},
+          "command": {"type": "string"},
+          "expected_exit_code": {"type": "integer"},
+          "must_contain": {"type": "array", "items": {"type": "string"}},
+          "must_not_contain": {"type": "array", "items": {"type": "string"}},
+          "artifacts": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    },
+    "ship_policy": {
+      "type": "object",
+      "required": ["block_on_failed_types"],
+      "properties": {
+        "block_on_failed_types": {"type": "array", "items": {"type": "string"}},
+        "allow_waiver": {"type": "boolean"}
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "tickets": [
+    {
+      "id": "TKT-001",
+      "spec_id": "SPEC-example-feature",
+      "linked_ac_ids": ["AC-001"],
+      "scope": {
+        "owned_files": ["src/feature/main.ts"],
+        "allowed_files": ["src/feature/utils.ts"],
+        "non_owned_files": ["src/billing/*"]
+      }
+    },
+    {
+      "id": "TKT-002",
+      "spec_id": "SPEC-example-feature",
+      "linked_ac_ids": ["AC-002"],
+      "scope": {
+        "owned_files": ["src/feature/validator.ts"],
+        "allowed_files": [],
+        "non_owned_files": ["src/payments/*"]
+      }
+    }
+  ]
+}

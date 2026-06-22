@@ -1,0 +1,16 @@
+[
+  {
+    "project": {"number": 7, "title": "Platform Delivery"},
+    "repository": {"full_name": "acme/api-service"},
+    "content": {
+      "number": 123,
+      "title": "Add deterministic error envelope",
+      "body": "Return code, message, trace_id",
+      "state": "open",
+      "labels": [{"name": "api"}, {"name": "p1"}],
+      "assignee": {"login": "cto"},
+      "updated_at": "2026-05-15T00:00:00Z",
+      "created_at": "2026-05-14T00:00:00Z"
+    }
+  }
+]

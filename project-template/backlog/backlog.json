@@ -1,0 +1,253 @@
+{
+  "project": "example",
+  "items": [
+    {
+      "id": "BLG-001",
+      "title": "Add deterministic error payload",
+      "description": "Errors should return code+message+trace_id",
+      "source": {
+        "system": "github",
+        "scope": null,
+        "external_id": "101"
+      },
+      "status": "todo",
+      "type": "feature",
+      "owner": "cto",
+      "labels": [
+        "api",
+        "p1"
+      ],
+      "risk_level": "medium",
+      "effort_points": 5,
+      "priority_inputs": {
+        "business_value": 5,
+        "time_criticality": 5,
+        "risk_reduction_or_opportunity": 5,
+        "job_size": 5
+      },
+      "dependencies": [],
+      "linked_spec_id": null,
+      "linked_ticket_ids": [],
+      "created_at": "2026-05-14T00:00:00Z",
+      "updated_at": "2026-05-15T00:00:00Z",
+      "major_project_id": "unassigned"
+    },
+    {
+      "id": "BLG-002",
+      "title": "Add auth integration tests",
+      "description": "Cover token expiry and role denial",
+      "source": {
+        "system": "github",
+        "scope": null,
+        "external_id": "102"
+      },
+      "status": "todo",
+      "type": "feature",
+      "owner": "qa",
+      "labels": [
+        "test"
+      ],
+      "risk_level": "medium",
+      "effort_points": 5,
+      "priority_inputs": {
+        "business_value": 5,
+        "time_criticality": 5,
+        "risk_reduction_or_opportunity": 5,
+        "job_size": 5
+      },
+      "dependencies": [],
+      "linked_spec_id": null,
+      "linked_ticket_ids": [],
+      "created_at": "2026-05-14T00:00:00Z",
+      "updated_at": "2026-05-15T00:00:00Z",
+      "major_project_id": "unassigned"
+    },
+    {
+      "id": "BLG-003",
+      "title": "Clawsweeper deterministic run reports",
+      "description": "Standardize output artifacts and trace IDs",
+      "source": {
+        "system": "github-project",
+        "scope": "openclaw/clawsweeper",
+        "external_id": "201"
+      },
+      "status": "todo",
+      "type": "feature",
+      "owner": "cto",
+      "labels": [
+        "platform",
+        "p1"
+      ],
+      "risk_level": "medium",
+      "effort_points": 5,
+      "priority_inputs": {
+        "business_value": 5,
+        "time_criticality": 5,
+        "risk_reduction_or_opportunity": 5,
+        "job_size": 5
+      },
+      "dependencies": [],
+      "linked_spec_id": null,
+      "linked_ticket_ids": [],
+      "created_at": "2026-05-14T00:00:00Z",
+      "updated_at": "2026-05-15T00:00:00Z",
+      "major_project_id": "openclaw-platform",
+      "repo": "openclaw/clawsweeper"
+    },
+    {
+      "id": "BLG-004",
+      "title": "Community auth contract alignment",
+      "description": "Unify auth payload with shared SDK",
+      "source": {
+        "system": "github-project",
+        "scope": "film-fun/community",
+        "external_id": "301"
+      },
+      "status": "todo",
+      "type": "feature",
+      "owner": "cto",
+      "labels": [
+        "community",
+        "p1"
+      ],
+      "risk_level": "medium",
+      "effort_points": 5,
+      "priority_inputs": {
+        "business_value": 5,
+        "time_criticality": 5,
+        "risk_reduction_or_opportunity": 5,
+        "job_size": 5
+      },
+      "dependencies": [],
+      "linked_spec_id": null,
+      "linked_ticket_ids": [],
+      "created_at": "2026-05-14T00:00:00Z",
+      "updated_at": "2026-05-15T00:00:00Z",
+      "major_project_id": "film-fun-ecosystem",
+      "repo": "film-fun/community"
+    },
+    {
+      "id": "BLG-005",
+      "title": "Splice render queue retry policy",
+      "description": "Add deterministic retry and backoff behavior",
+      "source": {
+        "system": "github-project",
+        "scope": "film-fun/splice",
+        "external_id": "301"
+      },
+      "status": "todo",
+      "type": "feature",
+      "owner": "cto",
+      "labels": [
+        "splice",
+        "p1"
+      ],
+      "risk_level": "medium",
+      "effort_points": 5,
+      "priority_inputs": {
+        "business_value": 5,
+        "time_criticality": 5,
+        "risk_reduction_or_opportunity": 5,
+        "job_size": 5
+      },
+      "dependencies": [],
+      "linked_spec_id": null,
+      "linked_ticket_ids": [],
+      "created_at": "2026-05-14T00:00:00Z",
+      "updated_at": "2026-05-15T00:00:00Z",
+      "major_project_id": "film-fun-ecosystem",
+      "repo": "film-fun/splice"
+    },
+    {
+      "id": "BLG-006",
+      "title": "Reelkit event schema normalization",
+      "description": "Normalize event schema with shared ecosystem contracts",
+      "source": {
+        "system": "github-project",
+        "scope": "film-fun/reelkit",
+        "external_id": "301"
+      },
+      "status": "todo",
+      "type": "feature",
+      "owner": "cto",
+      "labels": [
+        "reelkit",
+        "p2"
+      ],
+      "risk_level": "medium",
+      "effort_points": 5,
+      "priority_inputs": {
+        "business_value": 5,
+        "time_criticality": 5,
+        "risk_reduction_or_opportunity": 5,
+        "job_size": 5
+      },
+      "dependencies": [],
+      "linked_spec_id": null,
+      "linked_ticket_ids": [],
+      "created_at": "2026-05-14T00:00:00Z",
+      "updated_at": "2026-05-15T00:00:00Z",
+      "major_project_id": "film-fun-ecosystem",
+      "repo": "film-fun/reelkit"
+    },
+    {
+      "id": "BLG-007",
+      "title": "Investigate intermittent auth retry spike",
+      "description": "Ops issue impacting community-web-prod latency.",
+      "source": {
+        "system": "command-center-kanban",
+        "scope": "cc-product-delivery",
+        "external_id": "CC-101"
+      },
+      "status": "in_progress",
+      "type": "feature",
+      "owner": "cto",
+      "labels": [
+        "ops",
+        "auth"
+      ],
+      "risk_level": "medium",
+      "effort_points": 5,
+      "priority_inputs": {
+        "business_value": 5,
+        "time_criticality": 5,
+        "risk_reduction_or_opportunity": 5,
+        "job_size": 5
+      },
+      "dependencies": [],
+      "linked_spec_id": null,
+      "linked_ticket_ids": [],
+      "created_at": "2026-05-16T00:00:00Z",
+      "updated_at": "2026-05-16T00:15:00Z"
+    },
+    {
+      "id": "BLG-008",
+      "title": "Draft spec delta for token refresh behavior",
+      "description": "Potential contract update after ops investigation.",
+      "source": {
+        "system": "command-center-kanban",
+        "scope": "cc-product-delivery",
+        "external_id": "CC-102"
+      },
+      "status": "todo",
+      "type": "feature",
+      "owner": "cto",
+      "labels": [
+        "spec-delta"
+      ],
+      "risk_level": "medium",
+      "effort_points": 5,
+      "priority_inputs": {
+        "business_value": 5,
+        "time_criticality": 5,
+        "risk_reduction_or_opportunity": 5,
+        "job_size": 5
+      },
+      "dependencies": [],
+      "linked_spec_id": null,
+      "linked_ticket_ids": [],
+      "created_at": "2026-05-16T00:05:00Z",
+      "updated_at": "2026-05-16T00:20:00Z"
+    }
+  ]
+}

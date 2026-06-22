@@ -1,0 +1,20 @@
+{
+  "policy_version": 1,
+  "required_gates": [
+    "design_ready",
+    "build_ready",
+    "test_ready",
+    "review_ready",
+    "qa_ready"
+  ],
+  "blocking_conditions": [
+    "any_required_gate_not_pass",
+    "failed_check_type_in:security,contract,integration",
+    "unresolved_finding_severity_in:critical,high"
+  ],
+  "waiver_policy": {
+    "allowed": true,
+    "required_fields": ["id", "rationale", "approver", "expires_at"],
+    "max_duration_days": 14
+  }
+}

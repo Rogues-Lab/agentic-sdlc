@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Tickets",
+  "type": "object",
+  "required": ["tickets"],
+  "properties": {
+    "tickets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "spec_id", "linked_ac_ids", "scope"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^TKT-[0-9]{3}$"},
+          "spec_id": {"type": "string", "pattern": "^SPEC-[a-z0-9-]+$"},
+          "linked_ac_ids": {"type": "array", "items": {"type": "string", "pattern": "^AC-[0-9]{3}$"}},
+          "scope": {
+            "type": "object",
+            "required": ["owned_files", "non_owned_files"],
+            "properties": {
+              "owned_files": {"type": "array", "items": {"type": "string"}},
+              "allowed_files": {"type": "array", "items": {"type": "string"}},
+              "non_owned_files": {"type": "array", "items": {"type": "string"}}
+            }
+          }
+        }
+      }
+    }
+  }
+}

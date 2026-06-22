@@ -1,0 +1,13 @@
+{
+  "method": "wsjf",
+  "score_formula": "(business_value + time_criticality + risk_reduction_or_opportunity) / job_size",
+  "weights": {
+    "business_value": 1.0,
+    "time_criticality": 1.0,
+    "risk_reduction_or_opportunity": 1.0
+  },
+  "job_size_field": "job_size",
+  "default_job_size": 5,
+  "blocked_penalty": 1000,
+  "status_order": ["blocked", "in_progress", "todo", "done"]
+}

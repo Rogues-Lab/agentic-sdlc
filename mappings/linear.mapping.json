@@ -1,0 +1,12 @@
+{
+  "system": "=linear",
+  "scope": "team.key",
+  "id": "id",
+  "title": "title",
+  "description": "description",
+  "status": "state.name",
+  "labels": "labels[].name",
+  "owner": "assignee.name",
+  "updated_at": "updatedAt",
+  "created_at": "createdAt"
+}

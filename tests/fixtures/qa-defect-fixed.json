@@ -1,0 +1,12 @@
+{
+  "qa_report_id": "QA-901",
+  "spec_id": "SPEC-example-feature",
+  "ticket_ids": ["TKT-001"],
+  "summary": {"executed": 1, "passed": 1, "failed": 0, "blocked": 0},
+  "defects": [
+    {"id": "DEF-1", "severity": "high", "status": "fixed", "summary": "was broken, now remediated"}
+  ],
+  "gates": {
+    "qa_ready": "PASS"
+  }
+}

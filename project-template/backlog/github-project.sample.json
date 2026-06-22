@@ -1,0 +1,58 @@
+[
+  {
+    "project": {"number": 7, "title": "OpenClaw Delivery"},
+    "repository": {"full_name": "openclaw/clawsweeper"},
+    "content": {
+      "number": 201,
+      "title": "Clawsweeper deterministic run reports",
+      "body": "Standardize output artifacts and trace IDs",
+      "state": "open",
+      "labels": [{"name": "platform"}, {"name": "p1"}],
+      "assignee": {"login": "cto"},
+      "updated_at": "2026-05-15T00:00:00Z",
+      "created_at": "2026-05-14T00:00:00Z"
+    }
+  },
+  {
+    "project": {"number": 12, "title": "film.fun Ecosystem"},
+    "repository": {"full_name": "film-fun/community"},
+    "content": {
+      "number": 301,
+      "title": "Community auth contract alignment",
+      "body": "Unify auth payload with shared SDK",
+      "state": "open",
+      "labels": [{"name": "community"}, {"name": "p1"}],
+      "assignee": {"login": "cto"},
+      "updated_at": "2026-05-15T00:00:00Z",
+      "created_at": "2026-05-14T00:00:00Z"
+    }
+  },
+  {
+    "project": {"number": 12, "title": "film.fun Ecosystem"},
+    "repository": {"full_name": "film-fun/splice"},
+    "content": {
+      "number": 301,
+      "title": "Splice render queue retry policy",
+      "body": "Add deterministic retry and backoff behavior",
+      "state": "open",
+      "labels": [{"name": "splice"}, {"name": "p1"}],
+      "assignee": {"login": "cto"},
+      "updated_at": "2026-05-15T00:00:00Z",
+      "created_at": "2026-05-14T00:00:00Z"
+    }
+  },
+  {
+    "project": {"number": 12, "title": "film.fun Ecosystem"},
+    "repository": {"full_name": "film-fun/reelkit"},
+    "content": {
+      "number": 301,
+      "title": "Reelkit event schema normalization",
+      "body": "Normalize event schema with shared ecosystem contracts",
+      "state": "open",
+      "labels": [{"name": "reelkit"}, {"name": "p2"}],
+      "assignee": {"login": "cto"},
+      "updated_at": "2026-05-15T00:00:00Z",
+      "created_at": "2026-05-14T00:00:00Z"
+    }
+  }
+]

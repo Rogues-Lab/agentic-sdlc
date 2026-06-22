@@ -1,0 +1,12 @@
+{
+  "review_id": "RVW-901",
+  "spec_id": "SPEC-example-feature",
+  "ticket_ids": ["TKT-001"],
+  "decision": "REJECT",
+  "findings": [
+    {"severity": "high", "summary": "SQL injection in query builder", "status": "resolved"}
+  ],
+  "gates": {
+    "review_ready": "FAIL"
+  }
+}

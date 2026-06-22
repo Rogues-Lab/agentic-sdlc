@@ -1,0 +1,12 @@
+{
+  "system": "=github",
+  "scope": "repository.full_name",
+  "id": "number",
+  "title": "title",
+  "description": "body",
+  "status": "state",
+  "labels": "labels[].name",
+  "owner": "assignee.login",
+  "updated_at": "updated_at",
+  "created_at": "created_at"
+}

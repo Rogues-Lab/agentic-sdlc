@@ -1,0 +1,23 @@
+{
+  "request_id": "REQCTX-001",
+  "selected_stages": [
+    "inception",
+    "construction",
+    "operations"
+  ],
+  "stage_reasons": [
+    "Inception required due to complexity/risk/new-domain/multi-repo scope",
+    "Construction always required for implementation and verification",
+    "Operations required due to deployment risk/impact or migration"
+  ],
+  "input_profile": {
+    "request_id": "REQCTX-001",
+    "summary": "Cross-repo auth contract rollout with production impact",
+    "complexity_score": 8,
+    "risk_score": 7,
+    "new_product_or_major_domain": false,
+    "operations_impact": true,
+    "requires_migration": true,
+    "multi_repo_or_bundle": true
+  }
+}

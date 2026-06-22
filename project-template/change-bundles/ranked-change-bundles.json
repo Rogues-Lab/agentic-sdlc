@@ -1,0 +1,21 @@
+{
+  "ranked_change_bundles": [
+    {
+      "id": "CHG-001",
+      "title": "Example cross-repo change",
+      "major_project_id": "film-fun-ecosystem",
+      "status": "todo",
+      "score": 2.625,
+      "repos": [
+        "film-fun/community",
+        "film-fun/splice"
+      ],
+      "deployments_impacted": [
+        "community-web-prod",
+        "splice-api-prod",
+        "splice-worker-prod"
+      ],
+      "workstream_count": 2
+    }
+  ]
+}
